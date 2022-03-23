@@ -1,0 +1,14 @@
+nginx
+cron
+git
+# this is for navidrome
+ffmpeg
+# this is for email
+postfix
+dovecot-imapd
+dovecot-sieve
+opendkim
+spamassassin
+spamc
+opendkim-tools
+# end email
