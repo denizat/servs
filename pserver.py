@@ -6,7 +6,7 @@ if len(argv) < 2:
     quit()
 
 op = argv[1]
-bk = "/home/deniz/.local/src/server/test_client/"
+bk = "./test_client/"
 
 # need sudo for file perms
 base = "sudo rsync --numeric-ids -a --info=progress2  --delete"
@@ -38,12 +38,13 @@ def push():
 
 
 dirs = {
-    # "home/":{},
-    # "root/":{},
+    "home/": {},
+    "root/": {},
     "etc/": {
-        "include": [  # "ssh/",
-            # "nginx/",
-            # "ufw/",
+        "include": [
+            "ssh/",
+            "nginx/",
+            "ufw/",
             "rsyncd.conf",
             "cron.d/",
             "cron.daily/",
@@ -56,10 +57,10 @@ dirs = {
             "gshadow-",
             "passwd",
             "passwd-",
-            # "systemd/"
+            "systemd/",
         ]
     },
-    # "var/" : {"include": "www/" },
+    "var/": {"include": ["www/", "spool/"]},
 }
 
 
