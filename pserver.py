@@ -38,29 +38,50 @@ def push():
 
 
 dirs = {
-    "home/": {},
-    "root/": {},
-    "etc/": {
-        "include": [
-            "ssh/",
-            "nginx/",
-            "ufw/",
-            "rsyncd.conf",
-            "cron.d/",
-            "cron.daily/",
-            "cron.hourly/",
-            "cron.monthly/",
-            "cron.weekly/",
-            "group",
-            "group-",
-            "gshadow",
-            "gshadow-",
-            "passwd",
-            "passwd-",
-            "systemd/",
-        ]
-    },
-    "var/": {"include": ["www/", "spool/"]},
+    # "home/": {},
+    # "root/": {},
+
+    # "etc/": {
+    #     "include": [
+
+    #         "ufw/",
+    #         "systemd/",
+
+
+              # we want this backed up and version controlled
+    #         "ssh/",
+    #         "nginx/",
+
+
+              # we want this backed up and version controlled
+    #         "rsyncd.conf",
+    #         "cron.d/",
+    #         "cron.daily/",
+    #         "cron.hourly/",
+    #         "cron.monthly/",
+    #         "cron.weekly/",
+
+    #        # it is actually a good idea to back these up so that we don't need to
+    #        # deal with adding users in our shell scripts
+    #         "group",
+    #         "group-",
+    #         "gshadow",
+    #         "gshadow-",
+    #         "passwd",
+    #         "passwd-",
+
+    #     ]
+    # },
+
+    # "lib/": {
+    #     "include": [
+    #         # note, probably don't want to reproduce systemd configuration like this
+    #         # it would be better to do it with shell scripts (systemctl start/enable xyz)
+    #         "systemd/",
+    #     ]
+    # },
+
+    # "var/": {"include": ["www/", "spool/"]},
 }
 
 
